@@ -29,7 +29,12 @@ def image_mars():
 
 @app.route("/promotion_image")
 def promotion_image():
-    return render_template('index.html', title='Домашняя страница')
+    return render_template('promotion_image.html')
+
+
+@app.route("/astronaut_selection")
+def astronaut_selection():
+    return render_template('astronaut_selection.html')
 
 
 if __name__ == "__main__":
