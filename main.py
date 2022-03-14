@@ -52,18 +52,51 @@ def form_sample():
 <h3 align="center">на участие в миссии</h3>
 <div>
     <form class="login_form" method="post">
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-               placeholder="Введите адрес почты" name="email">
-        <input type="password" class="form-control" id="password" placeholder="Введите пароль" name="password">
+        <input type="surname" class="form-control" id="surname"
+               placeholder="Введите фамилию" name="surname">
+        <input type="name" class="form-control" id="name" placeholder="Введите имя" name="name">
+        <br>
+        <input type="email" class="form-control" id="email" placeholder="Введите адрес почты" name="email">
         <div class="form-group">
-            <label for="classSelect">В каком вы классе</label>
-            <select class="form-control" id="classSelect" name="class">
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
+            <label for="educationSelect">Какое у вас образование?</label>
+            <select class="form-control" id="educationSelect" name="education">
+                <option>Начальное</option>
+                <option>Среднее</option>
+                <option>Высшее</option>
             </select>
+        </div>
+        Какие у Вас есть профессии?
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="check1" name="check1">
+            <label class="form-check-label" for="acceptRules">Инженер-исследователь</label>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="check2" name="check2">
+            <label class="form-check-label" for="acceptRules">Инженер-строитель</label>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="check3" name="check3">
+            <label class="form-check-label" for="acceptRules">Пилот</label>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="check4" name="check4">
+            <label class="form-check-label" for="acceptRules">Метеоролог</label>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="check5" name="check5">
+            <label class="form-check-label" for="acceptRules">Инженер по жизнеобеспечению</label>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="check6" name="check6">
+            <label class="form-check-label" for="acceptRules">Инженер по радиационной защите</label>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="check7" name="check7">
+            <label class="form-check-label" for="acceptRules">Врач</label>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="check8" name="check8">
+            <label class="form-check-label" for="acceptRules">Экзобиолог</label>
         </div>
         <div class="form-group">
             <label for="about">Немного о себе</label>
@@ -87,10 +120,6 @@ def form_sample():
                     Женский
                 </label>
             </div>
-        </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="acceptRules" name="accept">
-            <label class="form-check-label" for="acceptRules">Готов быть добровольцем</label>
         </div>
         <button type="submit" class="btn btn-primary">Записаться</button>
     </form>
