@@ -45,7 +45,7 @@ def form_sample():
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
           crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{url_for('static', filename='css/style.css')}"/>
-    <title>Пример формы</title>
+    <title>Отбор астронавтов</title>
 </head>
 <body>
 <h1 align="center">Анкета претендента</h1>
@@ -99,14 +99,6 @@ def form_sample():
             <label class="form-check-label" for="acceptRules">Экзобиолог</label>
         </div>
         <div class="form-group">
-            <label for="about">Немного о себе</label>
-            <textarea class="form-control" id="about" rows="3" name="about"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="photo">Приложите фотографию</label>
-            <input type="file" class="form-control-file" id="photo" name="file">
-        </div>
-        <div class="form-group">
             <label for="form-check">Укажите пол</label>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="sex" id="male" value="male" checked>
@@ -121,7 +113,22 @@ def form_sample():
                 </label>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Записаться</button>
+        <div class="form-group">
+            <label for="about">Почему вы учавствуете в миссии?</label>
+            <textarea class="form-control" id="about" rows="3" name="about"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="photo">Приложите фотографию</label>
+            <input type="file" class="form-control-file" id="photo" name="file">
+        </div>
+        <br>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="ready" name="check8">
+            <label class="form-check-label" for="acceptRules">Готовы остаться на Марсе?</label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Отправить</button>
     </form>
 </div>
 </body>
