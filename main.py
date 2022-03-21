@@ -1,4 +1,5 @@
 from flask import Flask, url_for, render_template, request
+from random import shuffle
 
 app = Flask(__name__)
 
@@ -151,6 +152,46 @@ def form_sample():
         print(request.form['file'])
         print(request.form['check8'])
         return "Форма отправлена"
+
+
+@app.route('/choice/<planet_name>')
+def choice(planet_name):
+    characteristic_1 = ['Эта планета близка к Земле', 'На ней много необходимых ресурсов',
+                        'На ней есть вода и атмосфера', 'На ней есть небольшое магнитное поле', 'Я просто хочу туда',
+                        'Там очень разнообразная фауна']
+    characteristic_2 = ['Наконе, она просто красива', 'Наконец, на ней есть жизнь', 'Наконец, почему бы и нет?']
+    shuffle(characteristic_1)
+    shuffle(characteristic_2)
+    return f'''<!doctype html>
+                <html lang="en">
+                  <head>
+                    <meta charset="utf-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                    <link rel="stylesheet" 
+                    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+                    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+                    crossorigin="anonymous">
+                    <title>Варианты выбора</title>
+                  </head>
+                  <body>
+                    <h1>Мое предложение: {planet_name}</h1>
+                    <div class="alert alert-light" role="alert">
+  {characteristic_1[-1]}
+</div>
+<div class="alert alert-dark" role="alert">
+  {characteristic_1[0]}
+</div>
+<div class="alert alert-warning" role="alert">
+  {characteristic_1[1]}
+</div>
+<div class="alert alert-danger" role="alert">
+  {characteristic_1[2]}
+</div>
+<div class="alert alert-secondary" role="alert">
+  {characteristic_2[0]}
+</div>
+                  </body>
+                </html>'''
 
 
 if __name__ == "__main__":
