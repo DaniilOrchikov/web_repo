@@ -134,13 +134,22 @@ def form_sample():
 </body>
 </html>'''
     elif request.method == 'POST':
+        print(request.form['surname'])
+        print(request.form['name'])
         print(request.form['email'])
-        print(request.form['password'])
-        print(request.form['class'])
-        print(request.form['file'])
-        print(request.form['about'])
-        print(request.form['accept'])
+        print(request.form['education'])
+        print(request.form['check1'])
+        print(request.form['check2'])
+        print(request.form['check3'])
+        print(request.form['check4'])
+        print(request.form['check5'])
+        print(request.form['check6'])
+        print(request.form['check7'])
+        print(request.form['check8'])
         print(request.form['sex'])
+        print(request.form['about'])
+        print(request.form['file'])
+        print(request.form['check8'])
         return "Форма отправлена"
 
 
